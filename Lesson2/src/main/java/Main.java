@@ -36,7 +36,7 @@ public class Main {
 
         //  Пример upcast и downcast
 
-        Person person = new Person(16);
+        Person person = new Person(20);
         Person will = new Person("Will", "Fang"); //Upcast
         Person tom = new Person("Tom", "Trech");   //Upcast
 
