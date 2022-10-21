@@ -25,7 +25,7 @@ public class ReaderWriter {
         System.out.println(jsn);
 
         String jsonArray = "{\"day\":0,\"manpower\":5,\"budget\":100,\"pollution\":87,\"rep_gov\":0,\"rep_civ\":1,\"rep_wrk\":2,\"rep_sci\":3,\"rep_fag\":4,\"rep_bus\":5}";
-        Map<String, Object> map = objectMapper.readValue(jsonArray, new TypeReference<Map<String, Object>>(){});
+        Map<String, Object> map = objectMapper.readValue(jsonArray, new TypeReference<Map<String, Object>>() {});
         System.out.println("\nMap: " + map);
 
         System.out.println("\nTree");

@@ -1,9 +1,8 @@
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import saveSystem.ReaderWriter;
 
 import javax.management.AttributeList;
 import java.io.IOException;
+import java.lang.reflect.Proxy;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -21,7 +20,7 @@ public class Main {
         List<Object> list3 = new AttributeList();
 
 
-        list.addAll(List.of(pr.a,  pr.b,  pr.c,  pr.d,  pr.e,  pr.f,  pr.g, pr.h));
+        list.addAll(List.of(pr.a, pr.b, pr.c, pr.d, pr.e, pr.f, pr.g, pr.h));
         list.size();
         System.out.println(list);
 
@@ -41,6 +40,14 @@ public class Main {
         Person will = new Person("Will", "Fang"); //Upcast
         Person tom = new Person("Tom", "Trech");   //Upcast
 
+        ClassLoader willClassLoader = will.getClass().getClassLoader();
+        ClassLoader tomClassLoader = tom.getClass().getClassLoader();
+
+        Class[] interfaces = will.getClass().getInterfaces();
+
+        Person proxyWill = (Person) Proxy.newProxyInstance(willClassLoader, interfaces, new PersonInvocationHandler(will));
+        Person proxyTom = (Person) Proxy.newProxyInstance(tomClassLoader, interfaces, new PersonInvocationHandler(tom));
+
         Student student = new Student(18, "Mark", "Luote");
         Person george = (Person) student;
 
@@ -51,30 +58,22 @@ public class Main {
             System.out.println(george);
         }
 
-        tom.setAge(10);
-        tom.sayHi();
+        proxyTom.setAge(10);
+        proxyTom.sayHi();
 //        tom.sayBye();
-        will.setAge(22);
-        will.sayHi();
 //        will.sayBye();
+        proxyWill.setAge(22);
+        proxyWill.sayHi();
         System.out.println("==========================");
         System.out.println(will);
         System.out.println(tom);
 
         //  Пример работы с переменными по значению и по ссылке.
 
-        getNumber(pr.a,  pr.b,  pr.c,  pr.d,  pr.e,  pr.f,  pr.g, pr.h);
+        getNumber(pr.a, pr.b, pr.c, pr.d, pr.e, pr.f, pr.g, pr.h);
         System.out.println(
                 "a:" + pr.a + "\n" + "b:" + pr.b + "\n" + "c:" + pr.c + "\n" + "d:" + pr.d + "\n" + "e:" + pr.e + "\n" + "f:" + pr.f + "\n" + "g:" + pr.g + "\n" + "h:" + pr.h + "\n"
         );
-
-        //  Реализовать equals и hashcode
-//        System.out.println("------a == b------");
-//        equalsNum(1, 1);
-//        equalsNum(1, 2);
-//        System.out.println("-----a equals b-----");
-//        equalsObj(will, tom);
-//        equalsObj(person, george);
 
         System.out.println("equals");
         System.out.println(person.equals(person));
@@ -96,25 +95,8 @@ public class Main {
 
     }
 
-//    public static void equalsNum(int a, int b) {
-//        if (a == b) {
-//            System.out.println(a + " and " + b + " Are equals");
-//        } else {
-//            System.out.println(a + " and " + b + " Are not equals");
-//        }
-//    }
-//
-//    public static void equalsObj(Object a, Object b) {
-//        if (a.equals(b)) {
-//            System.out.println(a.hashCode() + " equals " + b.hashCode());
-//        } else {
-//            System.out.println(a.hashCode() + " not equals " + b.hashCode());
-//        }
-//    }
-
-
     public static void getNumber(int a, String b, byte c, long d, char e, float f, double g, boolean h) {
-        a = a^3;
+        a = a ^ 3;
         b = b + "bb";
         c++;
         d = d * 2;
