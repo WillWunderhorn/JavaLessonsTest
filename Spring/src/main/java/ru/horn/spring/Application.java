@@ -11,33 +11,10 @@ import java.util.stream.Stream;
 @SpringBootApplication
 public class Application {
 
-    public static List<StuffExample> list = new ArrayList();
-
+    //    public static List<StuffExample> list = new ArrayList();
+    public static String users[] = {"Tom", "Max", "Jack"};
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-
-        StuffExample ron = new StuffExample("Ron", 1);
-        StuffExample vanessa = new StuffExample("Vanessa", 2);
-        StuffExample mike = new StuffExample("Mike", 3);
-        StuffExample jack = new StuffExample("Jack", 4);
-        StuffExample jackass = new StuffExample("JackAss", 5);
-
-        list.addAll(List.of(ron, vanessa, mike, jack, jackass));
-
-    }
-
-    public static List<StuffExample> findAll() {
-        return list;
-    }
-
-    public static List<StuffExample> findById(int id) {
-        for(StuffExample stuff: list){
-            if(stuff.getId() == id){
-                return stuff;
-            }
-        }
-        Stream<StuffExample> suitablePerson = list.stream().filter(people -> people.getId() == id);
-        return (List<StuffExample>) suitablePerson;
     }
 
 }
