@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../Mockita/MockitaSpring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../Mockita/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../Mockita/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lesson2/UserService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lesson2/UserServise/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Liquibase/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WorkWithMockita/src/main/java" charset="UTF-8" />
+  </component>
+</project>

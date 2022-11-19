@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: 1-Holopsicon-1
+      changes:
+      - createTable:
+          tableName: primitiveInfos
+          columns:
+            - column:
+                name: id
+                type: BIGINT
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  nullable: false
+            - column:
+                name: message
+                type: text
+  - changeSet:
+      id: 2
+      author: 1-Holopsicon-1
+      changes:
+        - loadUpdateData:
+            encoding: UTF-8
+            file: db/changelog/data/data.csv
+            separator: ";"
+            tableName: primitiveInfos
+            primaryKey: id

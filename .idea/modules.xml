@@ -3,9 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaLessons.iml" filepath="$PROJECT_DIR$/JavaLessons.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Lesson2/Lesson2.iml" filepath="$PROJECT_DIR$/Lesson2/Lesson2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Orm/Orm.iml" filepath="$PROJECT_DIR$/Orm/Orm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Spring/Spring.iml" filepath="$PROJECT_DIR$/Spring/Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson2/Test/Test.iml" filepath="$PROJECT_DIR$/Lesson2/Test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UserService/UserService.iml" filepath="$PROJECT_DIR$/UserService/UserService.iml" />
     </modules>
   </component>
 </project>

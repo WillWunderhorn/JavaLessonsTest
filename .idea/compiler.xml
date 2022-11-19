@@ -7,21 +7,33 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Spring" />
+        <module name="Liquibase" />
+        <module name="MockitaSpring" />
+        <module name="Mockita" />
+        <module name="Test" />
         <module name="Lesson2" />
         <module name="Orm" />
+        <module name="Spring" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Lesson2" target="17" />
-      <module name="Orm" target="17" />
-      <module name="Spring" target="17" />
+      <module name="Lesson3" target="17" />
+      <module name="Test" target="17" />
       <module name="testBlablabla" target="17" />
+      <module name="UserService" target="17" />
+      <module name="UserServise" target="17" />
+      <module name="WorkWithMockita" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Liquibase" options="-parameters" />
+      <module name="MockitaSpring" options="-parameters" />
       <module name="Spring" options="-parameters" />
+      <module name="Test" options="-parameters" />
+      <module name="UserService" options="-parameters" />
+      <module name="UserServise" options="-parameters" />
+      <module name="WorkWithMockita" options="-parameters" />
     </option>
   </component>
 </project>
