@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/../Mockita/pom.xml" />
         <option value="$PROJECT_DIR$/WorkWithMockita/pom.xml" />
         <option value="$PROJECT_DIR$/../Mockita/MockitaSpring/pom.xml" />
+        <option value="$PROJECT_DIR$/Mockita/MockitaSpring/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

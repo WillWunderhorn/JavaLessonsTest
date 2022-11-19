@@ -3,8 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaLessons.iml" filepath="$PROJECT_DIR$/JavaLessons.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Lesson2/Test/Test.iml" filepath="$PROJECT_DIR$/Lesson2/Test/Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/UserService/UserService.iml" filepath="$PROJECT_DIR$/UserService/UserService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mockita/src/test/test.iml" filepath="$PROJECT_DIR$/Mockita/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mockita/MockitaSpring/src/test/test1.iml" filepath="$PROJECT_DIR$/Mockita/MockitaSpring/src/test/test1.iml" />
     </modules>
   </component>
 </project>

@@ -9,15 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Liquibase" />
         <module name="MockitaSpring" />
-        <module name="Mockita" />
-        <module name="Test" />
-        <module name="Lesson2" />
         <module name="Orm" />
         <module name="Spring" />
+        <module name="Lesson2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Lesson3" target="17" />
+      <module name="Mockita" target="11" />
       <module name="Test" target="17" />
       <module name="testBlablabla" target="17" />
       <module name="UserService" target="17" />
